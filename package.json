@@ -1,0 +1,19 @@
+{
+  "name": "eli_class",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node service.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "orki-morki",
+  "license": "MIT",
+  "description": "benchmark fun app",
+  "keywords": [
+    "fun"
+  ],
+  "dependencies": {
+    "express": "^4.17.1",
+    "os-utils": "0.0.14"
+  }
+}
