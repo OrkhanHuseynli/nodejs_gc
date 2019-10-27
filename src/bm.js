@@ -16,7 +16,8 @@ module.exports = class SimpleMatrix {
            color = Colors.fgRed()
         }
         console.log(color, `The difference between row and column search is ${result} ms`, Colors.fgWhite())
-        Performance.checkCPU("Matrix Build")
+        let performanceResult = Performance.checkCPU("Matrix Build")
+        return performanceResult
     }
 
     buildMatrix(size){
@@ -47,8 +48,8 @@ module.exports = class SimpleMatrix {
         }
         let t1 = process.hrtime(t0);
         // checkMemoryUsage(procName)
-        Performance.checkMemoryUsage("COL")
-        Performance.checkCPUUsage("COL")
+        //Performance.checkMemoryUsage("COL")
+        // Performance.checkCPUUsage("COL")
         return logPerformance(procName, t1)
         // console.log(`# column : ${column}`)  
     }
@@ -66,8 +67,8 @@ module.exports = class SimpleMatrix {
         }
         let t1 =process.hrtime(t0);
         // checkMemoryUsage(procName)
-        Performance.checkMemoryUsage("ROW")
-        Performance.checkCPUUsage("ROW")
+       // Performance.checkMemoryUsage("ROW")
+       // Performance.checkCPUUsage("ROW")
         return logPerformance("row", t1)
        // console.log(`# row : ${row}`)  
     }
